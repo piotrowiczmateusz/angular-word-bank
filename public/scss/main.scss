@@ -1,0 +1,61 @@
+// SASS ELEMENTS
+
+// VARIABLES
+	// Colors:
+
+    $white: #fff;
+    $silver: #e5e5e5;
+    $black: #000;
+    $teal: #009688;
+    $red: #b71c1c;
+
+
+	// Fonts:
+
+    $font: 'Source Sans Pro', sans-serif;
+
+// MIXINS
+
+@mixin transition($args) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+  background-clip: padding-box;  /* stops bg color from leaking outside the border: */
+}
+
+@mixin line-height($height) {
+  height: $height;
+  line-height: $height;
+  vertical-align: middle;
+}
+
+@mixin box-shadow($top, $left, $blur, $size, $color, $inset: false) {
+    @if $inset {
+        -webkit-box-shadow:inset $top $left $blur $size $color;
+        -moz-box-shadow:inset $top $left $blur $size $color;
+        box-shadow:inset $top $left $blur $size $color;
+    } @else {
+        -webkit-box-shadow: $top $left $blur $size $color;
+        -moz-box-shadow: $top $left $blur $size $color;
+        box-shadow: $top $left $blur $size $color;
+    }
+}
+
+
+// IMPORT
+
+@import 'partials/materialize';
+@import 'partials/general';
+@import 'partials/main';
+@import 'partials/nav';
+@import 'partials/flashcards';
+@import 'partials/list';
+@import 'partials/pagination';
+@import 'partials/print';

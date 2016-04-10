@@ -1,0 +1,18 @@
+/* Nav */
+
+.nav-tabs {
+  overflow: hidden;
+}
+
+.tabs .tab {
+  background: #f5f5f5!important;
+}
+
+.tabs .tab a,
+.tabs .tab a:hover {
+  color: $teal;
+}
+
+.indicator {
+  background: $teal !important;
+}

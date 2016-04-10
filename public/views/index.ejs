@@ -1,0 +1,41 @@
+<% include ./partials/header %>
+<% include ./partials/nav %>
+
+<main id="main" class="col-md-12 white" ng-app="App" ng-controller="WordBank">
+  <div class="container">
+    <div class="row">
+
+      <% include ./index/nav-tabs %>
+
+      <div class="tab-content">
+
+        <section class="col-md-12">
+          <% include ./index/filters %>
+        </section>
+
+        <section id="flashcards" class="col-md-12 tab-pane active" role="tabpanel">
+          <% include ./index/flashcards %>
+        </section>
+
+        <section id="list" class="col-md-12 tab-pane" role="tabpanel">
+          <% include ./index/list %>
+        </section>
+
+      </div>
+
+      <% include ./index/add-modal %>
+
+    </div>
+  </div>
+</main>
+
+<button
+  id="add-btn"
+  data-target="add-new"
+  class="modal-trigger btn-floating btn-large waves-effect waves-light"
+  ng-click="focus()">
+
+  <i class="fa fa-plus"></i>
+</button>
+
+<% include ./partials/footer %>

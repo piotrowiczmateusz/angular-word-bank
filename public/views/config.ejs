@@ -1,0 +1,55 @@
+<% include ./partials/header %>
+<% include ./partials/nav %>
+
+  	<main id="main" class="col-md-12 white" ng-app="App" ng-controller="WordBank">
+      <div class="container">
+        <div class="row">
+
+          <section class="col-md-12">
+
+            <div class="section-title col-md-12">
+              <h4>Default settings</h4>
+            </div>
+
+            <div class="col-md-4 input-field">
+              <div class="label">Default Part of Speech</div>
+              <select class="browser-default" ng-model="config.defaultPart" material-select watch>
+                <option ng-repeat="part in parts">{{part}}</option>
+              </select>
+            </div>
+
+            <div class="col-md-4 input-field">
+              <div class="label">Default Category</div>
+              <select class="browser-default" ng-model="config.defaultCategory" material-select watch>
+                <option ng-repeat="category in categories">{{category}}</option>
+              </select>
+            </div>
+
+            <div class="col-md-4 input-field">
+              <div class="label">Default Language</div>
+              <select class="browser-default" ng-model="config.defaultLang" material-select watch>
+                <option ng-repeat="lang in languages">{{lang.lang}}</option>
+              </select>
+            </div>
+
+            <div class="section-title col-md-12">
+              <h4>Max number of flashcards per page</h4>
+            </div>
+
+            <div class="input-field col-md-12">
+              <div class="label">Enter max number of flashcards per page</div>
+              <input id="max" type="number" class="validate" ng-model="config.maxPerPage">
+            </div>
+
+            <div class="col-md-12 submit-row">
+              <button  type="submit" class="waves-effect waves-light btn" ng-click="saveConfig()">
+                <i class="fa fa-save"></i>Save
+              </button>
+            </div>
+          </section>
+
+        </div>
+      </div>
+  	</main>
+
+<% include ./partials/footer %>

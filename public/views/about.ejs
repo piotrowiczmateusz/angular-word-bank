@@ -1,0 +1,59 @@
+<% include ./partials/header %>
+<% include ./partials/nav %>
+
+<main id="main" class="col-md-12 white" ng-app="App" ng-controller="WordBank">
+  <div class="container">
+    <div class="row">
+
+      <section class="col-md-12">
+
+        <div class="section-title">
+          <h4>About WordBank:</h4>
+        </div>
+
+        <p>
+          WordBank is a web applications created for managing words while learning new language.
+        </p>
+        <p>In <strong>Home</strong> section you can manage your words in one of two views:</p>
+        <ul>
+          <li><strong>Flashcards</strong> - allows you to practice new words by flashcards method.</li>
+          <li><strong>List</strong> - you can see all your words with details in table. You can also <strong>edit</strong> information about word or <strong>delete</strong> it.</li>
+        </ul>
+        <p>You are able to filter the results by selecting specific <strong>part of speech</strong>, <strong>category</strong> or <strong>language</strong>.</p>
+        <p>You can print your flashcards and list of words or save it as a PDF file. </p>
+        <p>In <strong>Config</strong> section you are able to set default settings such as:</p>
+        <ul>
+          <li>Default part of speech</li>
+          <li>Default cateogry</li>
+          <li>Default language</li>
+          <li>Default number of flashcards per page</li>
+        </ul>
+        <p>Application was created by Mateusz Piotrowicz &copy; 2016</p>
+
+        <div class="section-title">
+          <h4>Technologies:</h4>
+        </div>
+
+        <p>Applicaton was build with:</p>
+        <ul id="tech-logos">
+          <div class="col-md-4">
+            <li><img class="tech-logo" src="public/img/logos/node.png" alt="">Node JS</li>
+            <li><img class="tech-logo" src="public/img/logos/angular.png" alt="">Angular JS</li>
+          </div>
+          <div class="col-md-4">
+            <li><img class="tech-logo" src="public/img/logos/html5.png" alt="">HTML 5</li>
+            <li><img class="tech-logo" src="public/img/logos/css3.png" alt="">CSS 3</li>
+          </div>
+          <div class="col-md-4">
+            <li><img class="tech-logo" src="public/img/logos/bootstrap.png" alt="">Twitter Bootstrap</li>
+            <li><img class="tech-logo" src="public/img/logos/materialize.png" alt="">Materialize CSS Framework</li>
+          </div>
+        </ul>
+
+      </section>
+
+    </div>
+  </div>
+</main>
+
+<% include ./partials/footer %>

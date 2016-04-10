@@ -1,0 +1,38 @@
+/* Flashcards */
+
+#flashcards-content {
+  background: #f5f5f5;
+  padding: 20px;
+  margin: 0 -15px;
+}
+
+.word-card {
+  text-align: center;
+}
+
+.word-info {
+  @include line-height(30px);
+  border-bottom: 1px solid $silver;
+  color: #b6b6b6;
+  font-size: 11px;
+  text-align: center;
+}
+
+.word-info > span {
+  padding: 0;
+}
+
+.word {
+  text-transform: capitalize;
+  font-size: 24px;
+  padding: 20px;
+}
+
+.word-btn {
+  width: 100%;
+}
+
+.lang-img {
+  margin-top: -5px;
+  margin-left: 10px;
+}

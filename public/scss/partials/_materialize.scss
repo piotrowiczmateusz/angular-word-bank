@@ -1,0 +1,52 @@
+/* Materialize CSS */
+
+.btn:focus,
+.btn:active,
+.btn:visited,
+.btn:hover {
+  color: $white!important;
+}
+
+.toast-container {
+  padding: 0!important;
+  margin: 0 auto;
+}
+
+.toast {
+  color: $white;
+  width: 100%;
+  min-height:50px;
+  line-height: 50px;
+  vertical-align: middle;
+  margin: 0 auto!important;
+  padding: 0!important;
+}
+
+.saved {
+  background: #9ccc65;
+  padding: 0 20px;
+}
+
+.deleted {
+  background: #ef5350;
+  padding: 0 20px;
+}
+
+.modal {
+  height: auto!important;
+  max-height: 390px;
+  background: $white;
+}
+
+.modal-trigger,
+.modal-trigger:hover {
+  text-align: right;
+  box-shadow: none;
+  border: none;
+  color: $silver;
+}
+
+.modal-title {
+  border-bottom: 1px solid $silver;
+  margin: 20px 0;
+}

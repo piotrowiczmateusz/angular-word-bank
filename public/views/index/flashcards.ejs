@@ -1,0 +1,29 @@
+<div id="flashcards-content" class="row">
+
+  <!-- ng-repeat="word in words" -->
+  <div class="col-md-4" dir-paginate="word in words | itemsPerPage: perPage" ng-if='(word.category == showCategory || showCategory == "All") &&
+           (word.part == showPart || showPart == "All") &&
+           (word.language.lang == showLanguage || showLanguage == "All")'>
+
+    <div class="word-card card">
+
+      <div class="word-info">
+        <span class="col-xs-4">{{word.part}}</span>
+        <span class="col-xs-4">{{word.category}}</span>
+        <span class="col-xs-4">
+          <span>{{word.language.lang}}</span>
+          <img class="lang-img" ng-src="public/{{word.language.icon}}" />
+        </span>
+      </div>
+
+      <div ng-click="showTranslation = !showTranslation" class="word-btn waves-effect waves-default btn-white">
+        <div class="word" ng-show="!showTranslation">{{word.text}}</div>
+        <div class="word" ng-show="showTranslation">{{word.translation}}</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="pagination-container" class="col-md-12">
+    <dir-pagination-controls class="pagination"></dir-pagination-controls>
+  </div>

@@ -1,0 +1,24 @@
+/* Words List*/
+
+.lang-img-table {
+  float:left;
+  margin-right: 10px;
+}
+
+.remove-word,
+.remove-word:hover {
+  -webkit-appearance: none;
+  border: none;
+  background: transparent;
+  font-size: 18px;
+  color: $red;
+}
+
+.edit-word,
+.edit-word:active,
+.edit-word:focus {
+  -webkit-appearance: none;
+  border: none;
+  background: transparent;
+  font-size: 18px;
+}

@@ -1,0 +1,48 @@
+<div id="add-new" class="modal">
+  <div class="col-md-12">
+
+    <div class="modal-title">
+      <h4>Add words:</h4>
+    </div>
+
+    <form id="add-form" ng-submit="addWord()">
+
+      <div class="input-field col-md-6">
+        <input id="new-word" type="text" class="validate" ng-model="wordText" autofocus="">
+        <label for="new-word">Enter new word</label>
+      </div>
+
+      <div class="input-field col-md-6">
+        <input id="translation" type="text" class="validate" ng-model="wordTranslation">
+        <label for="translation">Enter translation</label>
+      </div>
+
+      <div class="input-field col-md-4">
+        <div class="label">Part of speech</div>
+        <select ng-model="wordPart" class="browser-default">
+          <option ng-repeat="part in parts">{{part}}</option>
+        </select>
+      </div>
+
+      <div class="input-field col-md-4">
+        <div class="label">Category</div>
+        <select ng-model="config.defaultCategory" class="browser-default">
+          <option ng-repeat="category in categories">{{category}}</option>
+        </select>
+      </div>
+
+      <div class="input-field col-md-4">
+        <div class="label">Language</div>
+        <select ng-model="wordLanguage" class="browser-default">
+          <option ng-repeat="lang in languages">{{lang.lang}}</option>
+        </select>
+      </div>
+
+      <div class="submit-row col-md-12">
+        <button id="add-submit" type="submit" class="modal-action modal-close waves-effect waves-light btn">
+          Add
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

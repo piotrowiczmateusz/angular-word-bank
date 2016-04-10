@@ -1,0 +1,42 @@
+<div id="filters">
+  <div class="section-title">
+    <h4>{{sectionTitle}}</h4>
+    <div class="btn-panel">
+      <a href="#" class="print" ng-click="print()">
+        <i class="fa fa-print"></i>Print
+      </a>
+      <a href="#" ng-if="sectionTitle == 'Words List'" class="save-pdf" ng-click="pdf()">
+        <i class="fa fa-file-pdf-o"></i>Save as PDF
+      </a>
+      <div class="words-total">{{totalWords}} words total</div>
+    </div>
+  </div>
+
+  <div id="input-form" class="row">
+
+    <div class="input-field col-md-4">
+      <div class="label">Part of speech</div>
+      <select class="browser-default" ng-model="showPart" material-select watch>
+        <option>All</option>
+        <option ng-repeat="part in parts">{{part}}</option>
+      </select>
+    </div>
+
+    <div class="input-field col-md-4">
+      <div class="label">Category</div>
+      <select class="browser-default" ng-model="showCategory">
+        <option>All</option>
+        <option ng-repeat="category in categories">{{category}}</option>
+      </select>
+    </div>
+
+    <div class="input-field col-md-4">
+      <div class="label">Language</div>
+      <select class="browser-default" ng-model="showLanguage" material-select watch>
+        <option>All</option>
+        <option ng-repeat="lang in languages">{{lang.lang}}</option>
+      </select>
+    </div>
+
+  </div>
+</div>

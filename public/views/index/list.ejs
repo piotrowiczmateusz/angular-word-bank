@@ -1,0 +1,75 @@
+<div id="list">
+  <table class="table-striped sortable">
+    <tr>
+      <th>Word</th>
+      <th>Translation</th>
+      <th>Part of speech</th>
+      <th>Category</th>
+      <th>Language</th>
+      <th class="th-edit">Edit</th>
+      <th class="th-remove">Delete</th>
+    </tr>
+
+    <tr ng-repeat="(index, word) in words"
+        ng-if="(word.category == showCategory || showCategory == 'All') &&
+               (word.part == showPart || showPart == 'All') &&
+               (showLanguage == word.language.lang || showLanguage == 'All')"
+        repeat-done="initModals()">
+
+      <td>{{word.text}}</td>
+      <td>{{word.translation}}</td>
+      <td>{{word.part}}</td>
+      <td>{{word.category}}</td>
+      <td><img class="lang-img-table" ng-src="public/{{word.language.icon}}" />{{word.language.lang}}</td>
+      <td class="td-edit">
+        <button data-target="{{word.text}}" class="edit-word modal-trigger">
+          <i class="fa fa-gear"></i>
+        </button>
+        <div ng-attr-id={{word.text}} class="modal">
+          <div class="col-md-12">
+            <div class="modal-title">
+              <h4>Edit word</h4>
+            </div>
+          </div>
+          <div class="col-md-12">
+
+            <div class="input-field col-md-6">
+              <input id="new-word" type="text" class="validate" ng-model="word.text">
+            </div>
+            <div class="input-field col-md-6">
+              <input id="translation" type="text" class="validate" ng-model="word.translation">
+            </div>
+
+            <div class="input-field col-md-4">
+              <div class="label">Part of speech</div>
+              <select ng-model="word.part" class="browser-default">
+                <option ng-repeat="part in parts">{{part}}</option>
+              </select>
+            </div>
+
+            <div class="input-field col-md-4">
+              <div class="label">Category</div>
+              <select ng-model="word.category" class="browser-default">
+                <option ng-repeat="category in categories">{{category}}</option>
+              </select>
+            </div>
+
+            <div class="input-field col-md-4">
+              <div class="label">Language</div>
+              <select ng-model="word.language.lang" class="browser-default">
+                <option ng-repeat="lang in languages">{{lang.lang}}</option>
+              </select>
+            </div>
+
+            <div class=" submit-row col-md-12">
+              <a href="#" class="modal-action modal-close waves-effect btn" ng-click="save()">Close</a>
+            </div>
+          </div>
+      </td>
+      <td ng-click="removeWord(index)" class="td-remove" onclick="">
+        <button class="remove-word"><i class="fa fa-trash"></i></button>
+      </td>
+      </div>
+    </tr>
+  </table>
+</div>

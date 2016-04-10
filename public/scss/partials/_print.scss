@@ -1,0 +1,38 @@
+/* Print settings */
+
+@media print {
+  #header,
+  .nav-tabs,
+  #flashcards-filters,
+  .section-title,
+  #input-form,
+  #add-btn,
+  .lang-img,
+  .lang-img-table,
+  .th-edit,
+  .td-edit,
+  .th-remove,
+  .td-remove,
+  .pagination,
+  #footer {
+    display: none;
+  }
+
+  .word-card {
+    width: calc(50% - 50px);
+    border: 1px solid $black;
+    display: inline-block!important;
+  }
+
+
+  th {
+    padding: 3px;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  td {
+    padding: 3px;
+    border-bottom: 1px solid $silver;
+  }
+}
